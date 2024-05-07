@@ -39,6 +39,7 @@
         <form action="/home" method="post">
         <p><textarea rows="4" cols="50" name="QUESTS" placeholder="Your qestion" ></textarea></p> 
         <p><input type="text" size="50" name="ADRESS" placeholder="Your email"></p>
+          <p><input type="text" size="50" name="USERNAME" placeholder="Your Name"></p>
         <style>
             textarea
             { resize: none; } 
