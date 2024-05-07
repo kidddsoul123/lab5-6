@@ -26,10 +26,10 @@ def my_from():
                 return "Name field has an incorrect value or an invalid length "
             else:
                 if re.match(emailpattern, mail):
-                 data_dict[mail] = quest
-                 print("Current data_dict contents:")
-                 for email, quest in data_dict.items():
-                    print(f"Email: {email}, Quest: {quest}")
+                 data_dict[mail] = [name, quest]
+                 print("Final data_dict contents:")
+                 for email, info in data_dict.items():
+                     print(f"Email: {email}, Username: {info[0]}, Question: {info[1]}")
                  return f"Thank you for contacting us {name} <br> Access date: {current_date}"
                 else:
                     return "You have entered an invalid email address"
