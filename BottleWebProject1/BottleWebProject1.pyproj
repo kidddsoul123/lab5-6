@@ -11,7 +11,7 @@
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
-    <LaunchProvider>Web launcher</LaunchProvider>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
     <OutputPath>.</OutputPath>
     <WebBrowserUrl>http://localhost</WebBrowserUrl>
     <PythonDebugWebServerCommandArguments>--debug $(CommandLineArguments)</PythonDebugWebServerCommandArguments>
@@ -22,6 +22,10 @@
     <IsWindowsApplication>False</IsWindowsApplication>
     <WebBrowserPort>
     </WebBrowserPort>
+    <EnableNativeCodeDebugging>False</EnableNativeCodeDebugging>
+    <TestFramework>pytest</TestFramework>
+    <UnitTestPattern>test*.py</UnitTestPattern>
+    <UnitTestRootDirectory>.</UnitTestRootDirectory>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -33,6 +37,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="app.py" />
+    <Compile Include="mail_re_test.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="module1.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="myform.py">
       <SubType>Code</SubType>
     </Compile>
